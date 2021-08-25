@@ -1,10 +1,9 @@
-
 void setup(){
-  ​​//code
+  //code
+  size(400,400);
 }
 void draw(){
   //more of your code here
-  size(400,400);
   background(58,170,255);
   noStroke();
 
@@ -12,7 +11,8 @@ void draw(){
   fill(255,128,0);
   rect(160,330,15,50); //left
   rect(230,330,15,50); //right
-  //add left foot
+  arc(160, 350, 75, 75, -1, 1, CHORD);//add left foot
+  //arc(160, 350, 45, 45, 0, PI+QUARTER_PI, CHORD);
   //add right foot
 
   // black
