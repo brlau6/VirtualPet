@@ -11,7 +11,9 @@ void draw(){
   fill(255,128,0);
   rect(160,330,15,50); //left
   rect(230,330,15,50); //right
-  arc(160, 350, 75, 75, -1, 1, CHORD);//add left foot
+  arc(167, 450, 150, 150, -2.1, -1, CHORD);//left foot
+  //arc(167, 450, 150, 150, -2.1, -1, CHORD);//left foot
+  arc(240, 390, 60, 60, -3.1, 0, CHORD);//right foot
   //arc(160, 350, 45, 45, 0, PI+QUARTER_PI, CHORD);
   //add right foot
 
