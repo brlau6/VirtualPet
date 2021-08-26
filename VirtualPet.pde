@@ -19,25 +19,31 @@ void draw(){
 
   // black
   fill(0,0,0);
-  ellipse(200,225,210,240);//body
+  ellipse(200,225,200,235);//body
   ellipse(200,125,135,125);//head
-
+  triangle(100,200,70,300,150,180);//left wing
+  triangle(255,175,350,300,300,180);//right wing
+  
+  // orange eye patches
+  fill(235, 104, 40);
+  ellipse(170,100,60,50);//left eye patch
+  ellipse(230,100,60,50);//right eye patch
+  
   // white
   fill(255,255,255);
   ellipse(200,250,150,180);//body
   ellipse(200,150,100,75);//mouth area
-  ellipse(175,100,60,50);//left eye patch
-  ellipse(225,100,60,50);//right eye patch
-
-  //eyes
+  ellipse(200,125,50,60);//nose patch
+  
+  //eyes (black)
   fill(0,0,0);
   ellipse(170,100,30,30);//left eye
   ellipse(230,100,30,30);//right eye
 
   //highlights
   fill(255,255,255);
-  ellipse(172,100,10,10);//left eye highlight
-  ellipse(232,100,10,10);//right eye highlight
+  ellipse(175,100,8,8);//left eye highlight
+  ellipse(235,100,8,8);//right eye highlight
 
   //mouth + nose
   stroke(0,0,0);
