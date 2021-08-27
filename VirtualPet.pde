@@ -1,10 +1,18 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
 void setup(){
-  //code
+  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
   size(400,400);
+  background(58,170,255);
 }
+
 void draw(){
   //more of your code here
-  background(58,170,255);
+  fill(58,170,255,60);//translucency to create afterimage affect
+  rect(0,0,400,400);
+  int y = arduino.analogRead(5)+80;
   noStroke();
 
   //legs
@@ -12,17 +20,16 @@ void draw(){
   rect(160,330,15,50); //left
   rect(230,330,15,50); //right
   arc(167, 450, 150, 150, -2.1, -1, CHORD);//left foot
-  //arc(167, 450, 150, 150, -2.1, -1, CHORD);//left foot
-  arc(240, 390, 60, 60, -3.1, 0, CHORD);//right foot
+  arc(240, 450, 150, 150, -2.1, -1, CHORD);//right foot
+  //arc(240, 390, 60, 60, -3.1, 0, CHORD);//right foot (bigger arc)
   //arc(160, 350, 45, 45, 0, PI+QUARTER_PI, CHORD);
-  //add right foot
 
   // black
   fill(0,0,0);
   ellipse(200,225,200,235);//body
   ellipse(200,125,135,125);//head
-  triangle(100,200,70,300,150,180);//left wing
-  triangle(255,175,350,300,300,180);//right wing
+  triangle(100,200,70,y,150,180);//left wing
+  triangle(255,175,325,y,290,180);//right wing
   
   // orange eye patches
   fill(235, 104, 40);
@@ -33,7 +40,7 @@ void draw(){
   fill(255,255,255);
   ellipse(200,250,150,180);//body
   ellipse(200,150,100,75);//mouth area
-  ellipse(200,125,50,60);//nose patch
+  ellipse(200,120,50,60);//nose patch
   
   //eyes (black)
   fill(0,0,0);
