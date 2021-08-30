@@ -1,9 +1,10 @@
-import processing.serial.*;
+/*import processing.serial.*;
 import cc.arduino.*;
 Arduino arduino;
+*/
 
 void setup(){
-  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
+  //arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
   size(400,400);
   background(58,170,255);
 }
@@ -12,7 +13,7 @@ void draw(){
   //more of your code here
   fill(58,170,255,60);//translucency to create afterimage affect
   rect(0,0,400,400);
-  int y = arduino.analogRead(5)+80;
+  //int y = arduino.analogRead(5)+80;
   noStroke();
 
   //legs
@@ -21,15 +22,19 @@ void draw(){
   rect(230,330,15,50); //right
   arc(167, 450, 150, 150, -2.1, -1);//left foot
   arc(240, 450, 150, 150, -2.1, -1);//right foot
+  //arc(167, 450, 150, 150, -2.1, -1, CHORD);//left foot
+  //arc(240, 450, 150, 150, -2.1, -1, CHORD);//right foot
   //arc(240, 390, 60, 60, -3.1, 0, CHORD);//right foot (bigger arc)
   //arc(160, 350, 45, 45, 0, PI+QUARTER_PI, CHORD);
 
   // black
-  fill(0,0,0);
+  fill(38,18,0);
   ellipse(200,225,200,235);//body
   ellipse(200,125,135,125);//head
-  triangle(100,200,70,y,150,180);//left wing
-  triangle(255,175,325,y,290,180);//right wing
+  triangle(100,200,70,300,150,180);//left wing
+  //triangle(100,200,70,y,150,180);//left wing
+  triangle(255,175,325,300,290,180);//right wing
+  //triangle(255,175,325,y,290,180);//right wing
   
   // orange eye patches
   fill(235, 104, 40);
