@@ -16,6 +16,10 @@ void draw(){
   //int y = arduino.analogRead(5)+80;
   noStroke();
 
+  //grass
+  fill(34,145,0);
+  rect(0,325,400,75);
+  
   //legs
   fill(255,128,0);
   rect(160,330,15,50); //left
@@ -29,6 +33,10 @@ void draw(){
   fill(38,18,0);
   ellipse(200,225,200,235);//body
   ellipse(200,125,135,125);//head
+  
+  //triangle(110,190,70,y,155,180);//left wing
+  //triangle(255,190,325,y,287,180);//right wing
+  
   triangle(103,200,75,300,150,180);//left wing
   //triangle(103,200,70,y,150,180);//left wing
   triangle(255,200,325,300,290,180);//right wing
@@ -57,6 +65,7 @@ void draw(){
 
   //mouth + nose
   stroke(0,0,0);
+  strokeWeight(3);
   noFill();
   line(190,120,195,122);//left nostril
   line(210,120,205,122);//right nostril
